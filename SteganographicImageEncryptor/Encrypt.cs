@@ -35,9 +35,9 @@ namespace SteganographicImageEncryptor
 
                 outputImage = new Bitmap(controlImage.Width, controlImage.Height);
 
-                for (int i = 0; i < inputImage.Width; i++)
+                for (int i = 0; i < controlImage.Width; i++)
                 {
-                    for (int j = 0; j < inputImage.Height; j++)
+                    for (int j = 0; j < controlImage.Height; j++)
                     {
                         //Get indexed pixel from each img
                         var controlPixel = controlImage.GetPixel(i, j);
