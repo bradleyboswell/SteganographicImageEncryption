@@ -98,7 +98,8 @@ namespace SteganographicImageEncryptor
             {
                 //Scale image for display
                 imgControl.SizeMode = PictureBoxSizeMode.StretchImage;
-                controlImage = new Bitmap(openFileDialog1.FileName);
+                Image control = Image.FromFile(openFileDialog1.FileName);
+                controlImage = scaleIMG(control, imgControl.Width, imgControl.Height);
                 imgControl.ClientSize = new Size(imgControl.Width, imgControl.Height);
                 imgControl.Image = controlImage;
             }
@@ -115,7 +116,8 @@ namespace SteganographicImageEncryptor
             {
                 //scale img for display
                 imgInput.SizeMode = PictureBoxSizeMode.StretchImage;
-                inputImage = new Bitmap(openFileDialog2.FileName);
+                Image input = Image.FromFile(openFileDialog2.FileName);
+                inputImage = scaleIMG(input,imgControl.Width, imgControl.Height);
                 imgInput.ClientSize = new Size(imgInput.Width, imgInput.Height);
                 imgInput.Image = inputImage;
             }
@@ -128,6 +130,25 @@ namespace SteganographicImageEncryptor
                 fDecrypt = new frmDecrypt();
                 fDecrypt.Show();
             }
+        }
+
+        private static Bitmap scaleIMG(Image img, int width, int height)
+        {
+            var box = new Rectangle(0, 0, width, height);
+            var scaledImg = new Bitmap(width, height);
+
+            scaledImg.SetResolution(img.HorizontalResolution, img.VerticalResolution);
+
+            var ctx = Graphics.FromImage(scaledImg);
+            ctx.CompositingMode = CompositingMode.SourceCopy;
+            ctx.CompositingQuality = CompositingQuality.HighQuality;
+            ctx.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            ctx.SmoothingMode = SmoothingMode.HighQuality;
+            ctx.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            var wrapper = new ImageAttributes();
+            wrapper.SetWrapMode(WrapMode.TileFlipXY);
+            ctx.DrawImage(img, box, 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, wrapper);
+            return scaledImg;
         }
 
         private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
