@@ -89,7 +89,7 @@ namespace SteganographicImageEncryptor
 
         private void ImgControl_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "JPG Files|*.jpg|JPEG Files|*.jpeg|PNG Files|*.png";
+            openFileDialog1.Filter = "JPG Files|*.jpg|JPEG Files|*.jpeg|PNG Files|*.png|Bitmap Files| *.bmp";
             openFileDialog1.Title = "Select Control Image";
             openFileDialog1.ShowDialog();
 
@@ -106,7 +106,7 @@ namespace SteganographicImageEncryptor
 
         private void ImgInput_Click(object sender, EventArgs e)
         {            
-            openFileDialog2.Filter = "JPEG Files|*.jpeg|PNG Files|*.png|JPG Files|*.jpg| AllFiles|*.*";
+            openFileDialog2.Filter = "JPEG Files|*.jpeg|PNG Files|*.png|JPG Files|*.jpg|Bitmap Files| *.bmp";
             openFileDialog2.Title = "Select Image to Encrypt";
             openFileDialog2.ShowDialog();
 
