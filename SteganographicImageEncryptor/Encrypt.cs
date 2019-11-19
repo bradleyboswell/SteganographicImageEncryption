@@ -33,7 +33,7 @@ namespace SteganographicImageEncryptor
                 inputBits = 0xFF >> offset; //input mask
                 controlBits = 0xFF << (int)bitKey.Value; //control mask
 
-                outputImage = new Bitmap(inputImage.Width, inputImage.Height);
+                outputImage = new Bitmap(controlImage.Width, controlImage.Height);
 
                 for (int i = 0; i < inputImage.Width; i++)
                 {
@@ -82,7 +82,7 @@ namespace SteganographicImageEncryptor
             {
                 //convert image to save
                 ImageConverter conv = new ImageConverter();
-                byte[] outBytes = (byte[])conv.ConvertTo(imgOutput.Image, typeof(byte[]));
+                byte[] outBytes = (byte[])conv.ConvertTo(outputImage, typeof(byte[]));
                 File.WriteAllBytes(saveFileDialog1.FileName, outBytes);
             }
         }
@@ -99,7 +99,7 @@ namespace SteganographicImageEncryptor
                 //Scale image for display
                 imgControl.SizeMode = PictureBoxSizeMode.StretchImage;
                 Image control = Image.FromFile(openFileDialog1.FileName);
-                controlImage = scaleIMG(control, imgControl.Width, imgControl.Height);
+                controlImage = scaleIMG(control, 1920, 1080);
                 imgControl.ClientSize = new Size(imgControl.Width, imgControl.Height);
                 imgControl.Image = controlImage;
             }
@@ -117,7 +117,7 @@ namespace SteganographicImageEncryptor
                 //scale img for display
                 imgInput.SizeMode = PictureBoxSizeMode.StretchImage;
                 Image input = Image.FromFile(openFileDialog2.FileName);
-                inputImage = scaleIMG(input,imgControl.Width, imgControl.Height);
+                inputImage = scaleIMG(input, 1920, 1080);
                 imgInput.ClientSize = new Size(imgInput.Width, imgInput.Height);
                 imgInput.Image = inputImage;
             }
