@@ -55,7 +55,7 @@
             // imgControl
             // 
             this.imgControl.BackColor = System.Drawing.Color.White;
-            this.imgControl.Location = new System.Drawing.Point(31, 128);
+            this.imgControl.Location = new System.Drawing.Point(18, 93);
             this.imgControl.Name = "imgControl";
             this.imgControl.Size = new System.Drawing.Size(640, 480);
             this.imgControl.TabIndex = 0;
@@ -65,7 +65,7 @@
             // imgInput
             // 
             this.imgInput.BackColor = System.Drawing.Color.White;
-            this.imgInput.Location = new System.Drawing.Point(1173, 128);
+            this.imgInput.Location = new System.Drawing.Point(1058, 93);
             this.imgInput.Name = "imgInput";
             this.imgInput.Size = new System.Drawing.Size(640, 480);
             this.imgInput.TabIndex = 1;
@@ -75,7 +75,7 @@
             // imgOutput
             // 
             this.imgOutput.BackColor = System.Drawing.Color.White;
-            this.imgOutput.Location = new System.Drawing.Point(601, 692);
+            this.imgOutput.Location = new System.Drawing.Point(537, 601);
             this.imgOutput.Name = "imgOutput";
             this.imgOutput.Size = new System.Drawing.Size(640, 480);
             this.imgOutput.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.decryptToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1992, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1719, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,7 +126,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(769, 51);
+            this.btnStart.Location = new System.Drawing.Point(704, 45);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(320, 71);
             this.btnStart.TabIndex = 4;
@@ -146,7 +146,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(205, 68);
+            this.label1.Location = new System.Drawing.Point(192, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 37);
             this.label1.TabIndex = 5;
@@ -157,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1404, 68);
+            this.label2.Location = new System.Drawing.Point(1289, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 37);
             this.label2.TabIndex = 6;
@@ -167,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(813, 627);
+            this.label3.Location = new System.Drawing.Point(749, 536);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 37);
             this.label3.TabIndex = 7;
@@ -176,7 +176,7 @@
             // bitKey
             // 
             this.bitKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bitKey.Location = new System.Drawing.Point(919, 194);
+            this.bitKey.Location = new System.Drawing.Point(854, 188);
             this.bitKey.Maximum = new decimal(new int[] {
             7,
             0,
@@ -201,7 +201,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(788, 194);
+            this.label4.Location = new System.Drawing.Point(723, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 37);
             this.label4.TabIndex = 9;
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1992, 1184);
+            this.ClientSize = new System.Drawing.Size(1719, 1088);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bitKey);
             this.Controls.Add(this.label3);

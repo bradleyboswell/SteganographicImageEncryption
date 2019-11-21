@@ -107,7 +107,7 @@ namespace SteganographicImageEncryptor
 
         private void ImgInput_Click(object sender, EventArgs e)
         {            
-            openFileDialog2.Filter = "JPEG Files|*.jpeg|PNG Files|*.png|JPG Files|*.jpg|Bitmap Files| *.bmp";
+            openFileDialog2.Filter = "JPG Files|*.jpg|JPEG Files|*.jpeg|PNG Files|*.png|Bitmap Files| *.bmp";
             openFileDialog2.Title = "Select Image to Encrypt";
             openFileDialog2.ShowDialog();
 
